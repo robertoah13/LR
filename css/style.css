@@ -1,0 +1,348 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between; /* Mantém o logo à esquerda e o menu à direita */
+    align-items: center; /* Alinha verticalmente os itens */
+    padding: 20px 0;
+    background-color: #ffffff;
+}
+
+.logo {
+    margin-left: 20px; /* Espaçamento do logo em relação à borda */
+}
+
+.logo img {
+    width: 150px;
+}
+
+nav {
+    margin-right: 200px; /* Espaçamento do menu em relação à borda direita */
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-size: 18px;
+    color: #1c1919;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Seção Hero */
+.hero {
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero .btn {
+    background-color: #0d0a0a;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background-color: #e65c50;
+}
+
+/* Seção Diferenciais */
+.diferenciais {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.diferenciais h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    width: 300px;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Seção Serviços */
+.servicos {
+    padding: 60px 20px;
+    background-color: #f1f1f1;
+    border-bottom: 5px solid #e0e0e0; /* Linha reta entre seções */
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.1); /* Sombra suave abaixo da linha */
+    position: relative;
+}
+
+.servicos h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.servicos p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+    text-align: center;
+}
+
+.servicos .btn {
+    background-color: #005b96;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.servicos .btn:hover {
+    background-color: #00406b;
+}
+
+/* Conteúdo da Seção Serviços */
+.servicos-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.servicos .texto {
+    flex: 1;
+    padding-left: 300px;
+    text-align: center;
+}
+
+.servicos .imagem {
+    width: 350px;
+    height: auto;
+    transform: translateX(-250px);
+}
+
+.servicos .imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Efeito Divisivo na Seção Serviços */
+
+
+/* Seção Tecnologias */
+.tecnologias {
+    padding: 60px 20px;
+    background-color: #e0e0e0; /* Cor de fundo sólida */
+}
+
+.tecnologias h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tecnologias p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+    text-align: center;
+}
+
+.tecnologias .btn {
+    background-color: #005b96;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.tecnologias .btn:hover {
+    background-color: #00406b;
+}
+
+/* Conteúdo da Seção Tecnologias */
+.tecnologias-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tecnologias .texto {
+    flex: 1;
+    padding-left: 300px;
+    text-align: center;
+}
+
+.tecnologias .imagem {
+    width: 350px;
+    height: auto;
+    transform: translateX(-250px);
+}
+
+.tecnologias .imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #005b96;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Ícones de Mídias Sociais */
+.social-media {
+    margin: 20px 0;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Navegação do Rodapé */
+.footer-nav {
+    margin-top: 20px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        float: none;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .servicos-content, .tecnologias-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .servicos .texto, .tecnologias .texto {
+        padding-right: 0;
+    }
+
+    .servicos .imagem, .tecnologias .imagem {
+        margin-top: 20px;
+    }
+}
