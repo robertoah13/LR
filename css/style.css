@@ -18,28 +18,21 @@ header {
     display: flex;
     justify-content: space-between; /* Mantém o logo à esquerda e o menu à direita */
     align-items: center; /* Alinha verticalmente os itens */
-    padding: 20px 0;
+    padding: 20px 20px; /* Espaçamento interno */
     background-color: #ffffff;
-}
-
-.logo {
-    margin-left: 20px; /* Espaçamento do logo em relação à borda */
 }
 
 .logo img {
     width: 150px;
 }
 
-nav {
-    margin-right: 200px; /* Espaçamento do menu em relação à borda direita */
-}
-
 nav ul {
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline-block;
     margin-left: 20px;
 }
 
@@ -132,89 +125,35 @@ nav ul li a:hover {
     color: #666;
 }
 
-/* Seção Serviços */
+/* Seções Serviços e Tecnologias */
+.servicos, .tecnologias {
+    padding: 60px 20px;
+}
+
 .servicos {
-    padding: 60px 20px;
     background-color: #f1f1f1;
-    border-bottom: 5px solid #e0e0e0; /* Linha reta entre seções */
-    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.1); /* Sombra suave abaixo da linha */
-    position: relative;
+    border-bottom: 5px solid #e0e0e0;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.1);
 }
 
-.servicos h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.servicos p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #555;
-    text-align: center;
-}
-
-.servicos .btn {
-    background-color: #005b96;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-}
-
-.servicos .btn:hover {
-    background-color: #00406b;
-}
-
-/* Conteúdo da Seção Serviços */
-.servicos-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.servicos .texto {
-    flex: 1;
-    padding-left: 300px;
-    text-align: center;
-}
-
-.servicos .imagem {
-    width: 350px;
-    height: auto;
-    transform: translateX(-250px);
-}
-
-.servicos .imagem img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
-
-/* Efeito Divisivo na Seção Serviços */
-
-
-/* Seção Tecnologias */
 .tecnologias {
-    padding: 60px 20px;
-    background-color: #e0e0e0; /* Cor de fundo sólida */
+    background-color: #e0e0e0;
 }
 
-.tecnologias h2 {
+.servicos h2, .tecnologias h2 {
     font-size: 36px;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.tecnologias p {
+.servicos p, .tecnologias p {
     font-size: 18px;
     margin-bottom: 30px;
     color: #555;
     text-align: center;
 }
 
-.tecnologias .btn {
+.servicos .btn, .tecnologias .btn {
     background-color: #005b96;
     color: #fff;
     padding: 15px 30px;
@@ -223,31 +162,30 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-.tecnologias .btn:hover {
+.servicos .btn:hover, .tecnologias .btn:hover {
     background-color: #00406b;
 }
 
-/* Conteúdo da Seção Tecnologias */
-.tecnologias-content {
+/* Conteúdo das Seções */
+.servicos-content, .tecnologias-content {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-.tecnologias .texto {
-    flex: 1;
-    padding-left: 300px;
+.servicos .texto, .tecnologias .texto,
+.servicos .imagem, .tecnologias .imagem {
+    flex: 1 1 50%; /* Cada elemento ocupa até 50% do espaço disponível */
+    padding: 20px;
+    box-sizing: border-box;
     text-align: center;
 }
 
-.tecnologias .imagem {
-    width: 350px;
-    height: auto;
-    transform: translateX(-250px);
-}
-
-.tecnologias .imagem img {
-    width: 100%;
+.servicos .imagem img, .tecnologias .imagem img {
+    max-width: 100%; /* Imagem não excede a largura do contêiner */
     height: auto;
     border-radius: 20px;
 }
@@ -305,22 +243,26 @@ footer p {
 
 /* Responsividade */
 @media (max-width: 768px) {
+    /* Ajustes no menu de navegação */
     nav {
-        float: none;
         text-align: center;
-        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
     }
 
     nav ul li {
-        display: block;
         margin: 10px 0;
     }
 
+    /* Ajustes nas cartas de diferenciais */
     .cards {
         flex-direction: column;
         align-items: center;
     }
 
+    /* Ajustes na seção Hero */
     .hero {
         padding: 60px 20px;
     }
@@ -333,16 +275,22 @@ footer p {
         font-size: 18px;
     }
 
+    /* Ajustes nas seções Serviços e Tecnologias */
     .servicos-content, .tecnologias-content {
         flex-direction: column;
-        text-align: center;
     }
 
-    .servicos .texto, .tecnologias .texto {
-        padding-right: 0;
+    .servicos .texto, .tecnologias .texto,
+    .servicos .imagem, .tecnologias .imagem {
+        flex: 1 1 100%; /* Cada elemento ocupa 100% da largura */
+        padding: 10px;
     }
 
     .servicos .imagem, .tecnologias .imagem {
-        margin-top: 20px;
+        order: -1; /* Opcional: coloca a imagem antes do texto */
+    }
+
+    .servicos .texto, .tecnologias .texto {
+        text-align: center;
     }
 }
